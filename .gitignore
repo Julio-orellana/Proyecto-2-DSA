@@ -1,59 +1,75 @@
-# ==============================
-# Entorno de desarrollo y Python
-# ==============================
-venv/                # Entorno virtual de Python
-.env                 # Variables de entorno (credenciales)
-*.pyc                # Bytecode de Python
-__pycache__/         # Cache de Python
-.pytest_cache/       # Cache de pruebas
-*.swp                # Archivos temporales de Vim
-.DS_Store            # Metadatos de macOS
+# ================================================
+# 🐍 Backend (Python/Flask) - Exclusiones específicas
+# ================================================
+# Entorno virtual y variables de entorno
+venv/                # Carpeta de entorno virtual de Python
+.env                 # Archivo con variables de entorno sensibles (credenciales)
 
-# ==============================
-# Configuración de IDE/Editores
-# ==============================
-.vscode/             # Configuración de VS Code
-.idea/               # Configuración de PyCharm
-*.code-workspace     # Workspace de VS Code
+# Archivos generados por Python
+*.pyc                # Bytecode compilado de Python
+__pycache__/         # Carpeta de caché de Python
+.pytest_cache/       # Carpeta de caché para pruebas Pytest
+*.egg-info/          # Metadatos de paquetes Python
+pip-selfcheck.json   # Archivo de auto-chequeo de pip
 
-# ==============================
+# Configuraciones locales y credenciales
+config.local.py      # Configuraciones específicas del entorno local
+secrets.json         # Archivo con credenciales alternativas
+
+# Base de datos y logs
+*.db                 # Archivos de SQLite
+*.sqlite3            # Archivos de SQLite3
+neo4j/data/          # Datos locales de Neo4j (si se usan)
+neo4j/logs/          # Logs de Neo4j
+*.log                # Archivos de log genéricos
+logs/                # Carpeta de logs
+
+# Reportes de pruebas y coverage
+.coverage            # Reporte de cobertura de pruebas
+htmlcov/             # HTML generado para coverage
+
+# ================================================
+# 🖥️ Frontend (React/JavaScript) - Exclusiones específicas
+# ================================================
 # Dependencias y builds
-# ==============================
-node_modules/        # Dependencias de JavaScript (si usas npm/yarn)
-dist/                # Carpeta de builds (Webpack, Vite, etc.)
+node_modules/        # Dependencias de Node.js (npm/yarn/pnpm)
+dist/                # Carpeta de build de producción (Vite/Webpack)
+dist-ssr/            # Carpeta de build para SSR (si aplica)
 staticfiles/         # Archivos estáticos compilados (Flask-Collect)
 
-# ==============================
-# Base de datos y logs
-# ==============================
-*.db                 # Archivos de SQLite
-*.sqlite3            # SQLite3
-*.log                # Logs de la aplicación
-neo4j/data/          # Datos locales de Neo4j (si los guardas en el proyecto)
-neo4j/logs/          # Logs de Neo4j
+# Archivos de entorno
+*.local              # Archivos de entorno local (ej: .env.local)
 
-# ==============================
-# Archivos generados por el sistema
-# ==============================
+# Logs de package managers
+npm-debug.log*       # Logs de npm
+yarn-debug.log*      # Logs de yarn
+yarn-error.log*      # Errores de yarn
+pnpm-debug.log*      # Logs de pnpm
+lerna-debug.log*     # Logs de Lerna
+
+# ================================================
+# 🛠️ Configuración de IDEs y Editores
+# ================================================
+.vscode/             # Configuración de VS Code (excepto extensions.json)
+!.vscode/extensions.json  # ⚠️ Mantiene este archivo específico
+.idea/               # Configuración de JetBrains (PyCharm, WebStorm)
+*.code-workspace     # Workspace de VS Code
+*.suo                # Configuración de usuario de Visual Studio
+*.ntvs*              # Archivos de Node.js Tools for Visual Studio
+*.njsproj            # Proyectos de Node.js Tools
+*.sln                # Soluciones de Visual Studio
+
+# ================================================
+# 🖥️ Sistema Operativo y Archivos Temporales
+# ================================================
+.DS_Store            # Metadatos de macOS
+*.swp                # Archivos temporales de Vim
+*.sw?                # Variantes de archivos temporales de Vim
 *.bak                # Copias de seguridad
 *.tmp                # Archivos temporales
-*.cache              # Cache general
+*.cache              # Caché general
 
-# ==============================
-# Archivos específicos de Python
-# ==============================
-*.egg-info/          # Metadatos de paquetes Python
-pip-selfcheck.json   # Auto-chequeo de pip
-.coverage            # Reporte de coverage (pruebas)
-htmlcov/             # HTML de coverage (pruebas)
-
-# ==============================
-# Archivos de configuración personalizados
-# ==============================
-config.local.py      # Configuraciones locales (no subir)
-secrets.json         # Credenciales alternativas
-
-# ==============================
-# Documentos de entregas
-# ==============================
-*.docx             # Documentos de Word
+# ================================================
+# 📁 Documentos y Otros
+# ================================================
+*.docx               # Documentos de Word (entregas o reportes)
