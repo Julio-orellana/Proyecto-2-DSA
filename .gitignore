@@ -1,2 +1,59 @@
-.env 
-*.docx
+# ==============================
+# Entorno de desarrollo y Python
+# ==============================
+venv/                # Entorno virtual de Python
+.env                 # Variables de entorno (credenciales)
+*.pyc                # Bytecode de Python
+__pycache__/         # Cache de Python
+.pytest_cache/       # Cache de pruebas
+*.swp                # Archivos temporales de Vim
+.DS_Store            # Metadatos de macOS
+
+# ==============================
+# Configuración de IDE/Editores
+# ==============================
+.vscode/             # Configuración de VS Code
+.idea/               # Configuración de PyCharm
+*.code-workspace     # Workspace de VS Code
+
+# ==============================
+# Dependencias y builds
+# ==============================
+node_modules/        # Dependencias de JavaScript (si usas npm/yarn)
+dist/                # Carpeta de builds (Webpack, Vite, etc.)
+staticfiles/         # Archivos estáticos compilados (Flask-Collect)
+
+# ==============================
+# Base de datos y logs
+# ==============================
+*.db                 # Archivos de SQLite
+*.sqlite3            # SQLite3
+*.log                # Logs de la aplicación
+neo4j/data/          # Datos locales de Neo4j (si los guardas en el proyecto)
+neo4j/logs/          # Logs de Neo4j
+
+# ==============================
+# Archivos generados por el sistema
+# ==============================
+*.bak                # Copias de seguridad
+*.tmp                # Archivos temporales
+*.cache              # Cache general
+
+# ==============================
+# Archivos específicos de Python
+# ==============================
+*.egg-info/          # Metadatos de paquetes Python
+pip-selfcheck.json   # Auto-chequeo de pip
+.coverage            # Reporte de coverage (pruebas)
+htmlcov/             # HTML de coverage (pruebas)
+
+# ==============================
+# Archivos de configuración personalizados
+# ==============================
+config.local.py      # Configuraciones locales (no subir)
+secrets.json         # Credenciales alternativas
+
+# ==============================
+# Documentos de entregas
+# ==============================
+*.docx             # Documentos de Word
