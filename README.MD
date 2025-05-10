@@ -39,6 +39,14 @@ El sistema permitirá:
 └── requirements.txt
 ```
 
+## Diseno Preeliminar de la Base de Datos
+
+![BD Design](https://raw.githubusercontent.com/Julio-orellana/Proyecto-2-DSA/main/docs/design/bd_inicial.png)
+
+## Comunicacion Actual entre backend y frontend
+
+![Comunicacion Example](https://raw.githubusercontent.com/Julio-orellana/Proyecto-2-DSA/main/docs/design/ProjectArchitecture.png)
+
 ## Funcionalidades Principales (Fase 1)
 
 - Definición del modelo de datos en grafos (usuarios, actividades, categorías).
